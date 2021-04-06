@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import useStore from './store'
 import { ReactQueryCacheProvider, QueryCache } from 'react-query'
