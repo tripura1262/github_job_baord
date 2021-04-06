@@ -1,0 +1,267 @@
+.main--home {
+    padding: 0 2.4rem;
+}
+@media(min-width: 713px) {
+    .main--home {
+        padding: 0 4rem 0 3.9rem;
+        transform: translateY(-3.9rem);
+    }
+}
+.main--home .container {
+    margin: 0 auto;
+}
+@media(min-width: 713px) {
+    .main--home .container {
+        max-width: 72rem;
+    }
+}
+@media(min-width: 1039px) {
+    .main--home .container {
+        max-width: 111rem;
+    }
+}
+.main--home .jobslist {
+    display: grid;
+    row-gap: 4.9rem;
+    margin-top: 5.7rem;
+}
+@media(min-width: 713px) {
+    .main--home .jobslist {
+        column-gap: 1.1rem;
+        margin: 10.5rem auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width: 1039px) {
+    .main--home .jobslist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(min-width: 1110px) {
+    .main--home .jobslist {
+        column-gap: 3rem;
+        row-gap: 6.5rem;
+    }
+}
+.main--home .loadmore-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6.2rem;
+}
+
+.theme-switch {
+    align-items: center;
+    display: inline-flex;
+}
+@media(min-width: 1024px) {
+    .theme-switch {
+        margin-top: -0.9rem;
+    }
+}
+.theme-switch__icon {
+    display: inline-flex;
+}
+
+.jobcard {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    max-width: 35rem;
+    position: relative;
+    border-radius: 0.6rem;
+    flex-flow: column nowrap;
+    padding: 0 2.1rem 3.2rem 3.2rem;
+    background-color: var(--bg-component);
+    transition: var(--transition) background-color;
+}
+.jobcard:hover .jobcard__title {
+    color: var(--color-gray-51);
+}
+.jobcard__logo {
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 1.5rem;
+    justify-content: center;
+    transform: translateY(-50%);
+    background-color: var(--bg-component);
+    transition: var(--transition) background-color;
+}
+.jobcard__logo img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.jobcard__timetype {
+    display: flex;
+    margin-top: -0.1rem;
+    align-items: center;
+}
+.jobcard .spacer-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0 1.2rem;
+    border-radius: 50%;
+    background-color: var(--color-gray-51);
+}
+.jobcard__title {
+    margin: 1.3rem 0;
+}
+.jobcard__company {
+    margin-bottom: 2.3rem;
+}
+.jobcard__location {
+    margin-top: auto;
+}
+/* @import "../Components/checkbox"; */
+.jobs-filters-form {
+    border-radius: 0.6rem;
+    background-color: var(--bg-component);
+    transition: var(--transition) background-color;
+}
+.jobs-filters-form--mobile {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem 1.6rem 1.6rem 2.4rem;
+}
+@media(min-width: 768px) {
+    .jobs-filters-form--mobile {
+        display: none;
+    }
+}
+.jobs-filters-form--mobile .input-group {
+    flex: 1;
+    margin-right: 1.2rem;
+}
+.jobs-filters-form--mobile .input-group input {
+    color: var(--text-color-input);
+    transition: var(--transition) color;
+}
+.jobs-filters-form--mobile .input-group input::placeholder {
+    opacity: 1;
+    color: var(--text-color-input-ph);
+    transition: var(--transition) color;
+}
+.jobs-filters-form--mobile__modal {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    padding: 0 2.4rem;
+    align-items: center;
+    justify-content: center;
+    animation-name: fadeIn;
+    animation-duration: 600ms;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+@media(min-width: 768px) {
+    .jobs-filters-form--mobile__modal {
+        display: none;
+    }
+}
+.jobs-filters-form--mobile__modal .modal__container {
+    width: 100%;
+    padding: 2.4rem 0;
+    border-radius: 0.6rem;
+    background-color: var(--bg-component);
+    transition: var(--transition) background-color;
+}
+.jobs-filters-form--mobile__modal .modal__container .form-control {
+    display: flex;
+    padding: 0 2.4rem;
+}
+.jobs-filters-form--mobile__modal .modal__container .input-group--mobile-location {
+    padding: 0 2.4rem 2.4rem;
+    border-bottom: 1px solid rgba(110, 128, 152, 0.20);
+}
+.jobs-filters-form--mobile__modal .modal__container .input-group--mobile-location input {
+    padding-left: 3.3rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: var(--text-color-input);
+    background-position: left center;
+    background-image: url('../../Assets/desktop/icon-location.svg');
+}
+.jobs-filters-form--mobile__modal .modal__container .input-group--mobile-location input::placeholder {
+    opacity: 1;
+    color: var(--text-color-input-ph);
+}
+.jobs-filters-form--mobile__modal .modal__container .input-group--checkbox {
+    margin: 2.4rem;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.jobs-filters-form--tablet {
+    display: flex;
+    height: 8rem;
+    align-items: center;
+    padding-left: 2.4rem;
+    padding-right: 1.6rem;
+}
+@media(min-width: 1210px) {
+    .jobs-filters-form--tablet {
+        padding-left: 3.2rem;
+    }
+}
+.jobs-filters-form--tablet .input-group {
+    padding: 2.8rem 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.jobs-filters-form--tablet .input-group--title {
+    flex: 1;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    background-image: url('../../Assets/desktop/icon-search.svg');
+}
+@media(min-width: 1210px) {
+    .jobs-filters-form--tablet .input-group--title {
+        width: 43.2rem;
+        min-width: 43.2rem;
+    }
+}
+.jobs-filters-form--tablet .input-group--location {
+    flex: 1;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    margin-left: 2.4rem;
+    background-image: url('../../Assets/desktop/icon-location.svg');
+}
+@media(min-width: 1210px) {
+    .jobs-filters-form--tablet .input-group--location {
+        width: 27.8rem;
+    }
+}
+.jobs-filters-form--tablet .input-group--checkbox {
+    width: 10.8rem;
+    overflow: hidden;
+    margin-left: 2rem;
+    min-width: 10.8rem;
+    white-space: nowrap;
+    margin-right: 2.8rem;
+}
+@media(min-width: 1210px) {
+    .jobs-filters-form--tablet .input-group--checkbox {
+        width: 14.8rem;
+        margin-left: 3.2rem;
+    }
+}
+.jobs-filters-form--tablet .input-divider {
+    width: 0.1rem;
+    height: 100%;
+    opacity: 0.2;
+    background-color: var(--color-gray-51);
+}

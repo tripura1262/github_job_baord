@@ -1,0 +1,75 @@
+.t-light-gray {
+    color: var(--color-gray-51);
+}
+
+.t-violet {
+    color: var(--color-violet-61);
+}
+
+.t-h1 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: var(--weight-bold);
+    @media(min-width: 737px) {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+
+    }
+}
+
+.t-h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: var(--weight-bold);
+    @media(min-width: 737px) {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+    }
+}
+
+.t-h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--text-color-1);
+    font-weight: var(--weight-bold);
+    transition: var(--transition) color;
+}
+
+.t-body {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: var(--weight-regular);
+}
+
+.t-location {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: var(--weight-bold);
+}
+
+.t-how-to-apply {
+    color: var(--color-white);
+}
+
+.t-apply-link {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--color-white);
+    text-decoration: underline;
+    font-weight: var(--weight-bold);
+}
+
+.t-apply-link:focus {
+    outline: var(--outline);
+    outline-color: var(--color-white);
+}
+.t-checkbox-label {
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-left: 1.6rem;
+    color: var(--text-color-1);
+    font-weight: var(--weight-bold);
+    transition: var(--transition) color;
+}
